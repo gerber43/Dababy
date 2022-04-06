@@ -28,6 +28,10 @@ public class Dababy extends JFrame implements ActionListener{
 
     JLabel daText;
 
+    Container c = this.getContentPane(); //Gets the content layer
+    JLabel label = new JLabel(); //JLabel Creation
+    Dimension size = label.getPreferredSize(); //Gets the size of the image
+
     public String filePath() {
         String filePath = System.getProperty("user.dir");
         return filePath;
@@ -140,26 +144,6 @@ public class Dababy extends JFrame implements ActionListener{
         this.add(chipmunk);
         this.add(jetson);
 
-        Container c = this.getContentPane(); //Gets the content layer
-        JLabel label = new JLabel(); //JLabel Creation
-        Dimension size = label.getPreferredSize(); //Gets the size of the image
-
-
-
-
-
-        yeah.addActionListener(e -> label.setIcon(new ImageIcon(asset +"dababy1.png")));
-        noCap.addActionListener(e -> label.setIcon(new ImageIcon(asset + "dababy.png")));
-        lesGo.addActionListener(e -> label.setIcon(new ImageIcon(asset+ "obama.gif")));
-        pullUp.addActionListener(e -> label.setIcon(new ImageIcon(asset+ "dababy3.png")));
-        convert.addActionListener(e -> label.setIcon(new ImageIcon(asset +"dababy2.gif")));
-        suge.addActionListener(e -> label.setIcon(new ImageIcon(asset +"dababy4.png")));
-        stop.addActionListener(e -> label.setIcon(new ImageIcon(asset +"stop.png")));
-        rockstar.addActionListener(e -> label.setIcon(new ImageIcon(asset +"rockstar.png")));
-        sugeFull.addActionListener(e -> label.setIcon(new ImageIcon(asset +"sugeFull.gif")));
-        chipmunk.addActionListener(e -> label.setIcon(new ImageIcon(asset +"chipmunk.png")));
-        jetson.addActionListener(e -> label.setIcon(new ImageIcon(asset +"jetson.png")));
-
 
 
         label.setBounds(475, 50, screenDimension.width, screenDimension.height); //Sets the location of the image
@@ -197,36 +181,48 @@ public class Dababy extends JFrame implements ActionListener{
 
         if(e.getSource() == yeah) {
             playAudio("yeah.wav");
+            label.setIcon(new ImageIcon(asset +"yeah.png"));
         }
         if(e.getSource() == noCap) {
             playAudio("nocap.wav");
+            label.setIcon(new ImageIcon(asset + "noCap.png"));
         }
         if(e.getSource() == lesGo) {
             playAudio("lesGo.wav");
+            label.setIcon(new ImageIcon(asset + "lesGo.gif"));
         }
         if(e.getSource() == pullUp) {
             playAudio("pullUp.wav");
+            label.setIcon(new ImageIcon(asset + "pullUp.png"));
         }
         if(e.getSource() == convert) {
             playAudio("convert.wav");
+            label.setIcon(new ImageIcon(asset + "convert.gif"));
         }
         if(e.getSource() == suge) {
             playAudio("suge.wav");
+            label.setIcon(new ImageIcon(asset + "suge.png"));
         }
         if(e.getSource() == rockstar) {
             playAudio("rockstar.wav");
+            label.setIcon(new ImageIcon(asset + "rockstar.png"));
         }
         if(e.getSource() == stop) {
             stop();
+            label.setIcon(new ImageIcon(asset + "stop.png"));
+
         }
         if(e.getSource() == sugeFull) {
             playAudio("sugeFull.wav");
+            label.setIcon(new ImageIcon(asset + "sugeFull.gif"));
         }
         if(e.getSource() == chipmunk) {
             playAudio("chipmunk.wav");
+            label.setIcon(new ImageIcon(asset + "chipmunk.png"));
         }
         if(e.getSource() == jetson) {
             playAudio("jetson.wav");
+            label.setIcon(new ImageIcon(asset + "jetson.png"));
         }
 
     }
